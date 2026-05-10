@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Full width layout fix */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: none;
+}
+
+/* Remove default margins and padding */
+.container {
+  max-width: 100%;
+  padding: 0 40px; /* Increased horizontal padding for more space */
+}
+
+/* Full width sections */
+.banner_bg_main,
+.main-header-wrapper,
+.footer-section {
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Ensure header spans full width */
+.main-header-wrapper {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+}
+
+.announcement-bar,
+.navbar-main {
+  width: 100vw;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.announcement-bar .container,
+.navbar-main .container {
+  max-width: 100%;
+  padding: 0 40px;
+  position: relative;
+  left: 0;
+  transform: none;
+}

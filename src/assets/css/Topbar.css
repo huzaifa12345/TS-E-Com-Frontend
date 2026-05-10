@@ -1,0 +1,222 @@
+/* --- TAYYAB SPORTS PREMIUM THEME (FIXED ALIGNMENT) --- */
+:root {
+    --ts-navy: #020c1b;
+    --ts-darker: #010812;
+    --ts-cyan: #00d4ff;
+    --ts-blue-deep: #0072ff;
+    --ts-white: #ffffff;
+    --ts-text-gray: #a8b2d1;
+    
+    --grad-electric: linear-gradient(135deg, #00d4ff 0%, #0072ff 100%);
+    --grad-hover: linear-gradient(135deg, #0072ff 0%, #00d4ff 100%);
+}
+/* .ts-main-nav{
+    background-color: #002357;
+} */
+.ts-header {
+    width: 100%;
+    background: var(--ts-navy);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 1. Top Utility Strip - Spacing Fixed */
+.ts-utility {
+    background: var(--ts-darker);
+    padding: 10px 0;
+    font-size: 12px;
+    color: var(--ts-text-gray);
+    border-bottom: 2px solid var(--ts-cyan);
+    border-top: 2px solid var(--ts-cyan);
+}
+
+.ts-u-left, .ts-auth-link {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Support aur Mic icon ke darmiyan space */
+    color: var(--ts-cyan);
+}
+
+.ts-auth-link {
+    color: var(--ts-cyan);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 2px;
+}
+ 
+/* "Hi Hamza" Hover Border */
+.ts-auth-link:hover {
+    color: var(--ts-cyan);
+}
+.ts-auth-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--ts-cyan);
+    transition: width 0.3s ease;
+}
+.ts-auth-link:hover::after {
+    width: 100%;
+}
+
+/* 2. Main Nav Layout */
+.ts-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+}
+
+.ts-nav-left, .ts-nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.ts-nav-right { 
+    justify-content: flex-end; 
+    gap: 25px; /* Links aur Cart ke darmiyan space */
+}
+
+/* Desktop Links & Hover Border */
+.ts-desktop-links { 
+    display: flex;
+    gap: 25px; 
+}
+
+.ts-link {
+    color: var(--ts-white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+.ts-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--ts-cyan);
+    transition: width 0.3s ease;
+}
+
+.ts-link:hover::after, .active-link::after {
+    width: 100%;
+}
+
+.ts-link:hover, .active-link {
+    color: var(--ts-cyan);
+}
+
+/* Cart Button - Spacing Fixed */
+.ts-cart-btn {
+    background: var(--grad-electric);
+    color: var(--ts-white);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.25);
+}
+
+.ts-cart-icon-box {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.ts-badge {
+    position: absolute;
+    top: -9px;
+    right: -11px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--ts-cyan);
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: center;
+    border: 2px solid var(--ts-cyan);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ts-cart-btn:hover {
+    background: var(--grad-hover);
+    transform: translateY(-2px);
+    color: var(--ts-navy);
+}
+
+/* Logo & Toggle */
+.ts-logo {
+    height: 120px;
+    width: auto; 
+    filter: drop-shadow(0 0 8px var(--ts-cyan));
+}
+
+.ts-menu-toggle {
+    background: var(--grad-electric);
+    /* border: 1.5px solid var(--ts-cyan); */
+    color: var(--ts-white);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.ts-menu-toggle:hover {
+    background: var(--grad-hover);
+    transform: translateY(-2px);
+    color: var(--ts-navy);
+}
+
+/* 3. Trust Bar */
+.ts-trust-bar {
+    background: var(--ts-darker);
+    color: var(--ts-cyan);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+     border-bottom: 2px solid var(--ts-cyan);
+    border-top: 2px solid var(--ts-cyan);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .ts-logo { height: 80px; }
+    .ts-desktop-links { display: none; }
+    .ts-nav-right { gap: 10px; }
+    .ts-cart-btn,
+    .ts-menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+}
