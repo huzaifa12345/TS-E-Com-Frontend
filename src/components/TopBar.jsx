@@ -46,7 +46,7 @@ const TopBar = ({ onMenuToggle }) => {
           {/* CENTER: Logo */}
           <div className="ts-nav-center">
             <Link to="/">
-              <img src={websiteLogo || 'https://via.placeholder.com/240x80?text=Logo'} alt="Tayyab Sports" className="ts-logo" />
+              <img src={websiteLogo || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMjQwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMjQwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjZjNmNGY2Ii8+Cjx0ZXh0IHg9IjEyMCIgeT0iNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvZ288L3RleHQ+Cjwvc3ZnPg=='} alt="Tayyab Sports" className="ts-logo" />
             </Link>
           </div>
 
