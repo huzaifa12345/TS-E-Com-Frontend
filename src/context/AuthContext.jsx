@@ -17,8 +17,8 @@ const authReducer = (state, action) => {
         ...state,
         isLoading: false,
         isAuthenticated: true,
-        user: action.payload.user,
-        token: action.payload.token,
+        user: action.payload?.user || null,
+        token: action.payload?.token || null,
         error: null
       };
 
@@ -130,7 +130,10 @@ export const AuthProvider = ({ children }) => {
       
       dispatch({
         type: 'LOGIN_SUCCESS',
-        payload: response
+        payload: {
+          user: response?.user,
+          token: response?.token
+        }
       });
 
       console.log('AuthContext - Login success dispatched');

@@ -12,7 +12,7 @@ export const useLogo = () => {
 };
 
 export const LogoProvider = ({ children }) => {
-  const [websiteLogo, setWebsiteLogo] = useState('/src/assets/images/kidcolor(1).png');
+  const [websiteLogo, setWebsiteLogo] = useState('https://via.placeholder.com/240x80?text=Logo');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

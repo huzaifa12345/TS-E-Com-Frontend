@@ -26,7 +26,7 @@ const TopBar = ({ onMenuToggle }) => {
           <div className="ts-u-right">
              <Link to={user ? "/profile" : "/login"} className="ts-auth-link">
                 <FaUser className="ts-accent-text me-2" />
-                <span>{user ? `Hi, ${user.first_name}` : 'Login'}</span>
+                <span>{user?.first_name ? `Hi, ${user.first_name}` : 'Login'}</span>
              </Link>
           </div>
         </div>
@@ -46,7 +46,7 @@ const TopBar = ({ onMenuToggle }) => {
           {/* CENTER: Logo */}
           <div className="ts-nav-center">
             <Link to="/">
-              <img src={websiteLogo} alt="Tayyab Sports" className="ts-logo" />
+              <img src={websiteLogo || 'https://via.placeholder.com/240x80?text=Logo'} alt="Tayyab Sports" className="ts-logo" />
             </Link>
           </div>
 
@@ -60,7 +60,7 @@ const TopBar = ({ onMenuToggle }) => {
             <Link to="/cart" className="ts-cart-btn">
               <div className="ts-cart-icon-box">
                 <FaShoppingCart />
-                {getCartItemsCount() > 0 && <span className="ts-badge">{getCartItemsCount()}</span>}
+                {getCartItemsCount && getCartItemsCount() > 0 && <span className="ts-badge">{getCartItemsCount()}</span>}
               </div>
               <span className="d-none d-md-inline ms-2"></span>
             </Link>

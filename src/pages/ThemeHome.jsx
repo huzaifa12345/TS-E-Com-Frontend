@@ -55,12 +55,12 @@ const ThemeHome = () => {
                     if (slides.length === 0) {
                         setHeroSlides([
                             {
-                                image: "/src/assets/images/badminton-banner.webp",
+                                image: "https://via.placeholder.com/1600x600?text=Slide+1",
                                 title: "Professional Badminton Rackets",
                                 description: "Premium quality rackets designed for competitive performance and player comfort."
                             },
                             {
-                                image: "/src/assets/images/sports-gear-banner.webp",
+                                image: "https://via.placeholder.com/1600x600?text=Slide+2",
                                 title: "Complete Sports Equipment",
                                 description: "Everything you need for badminton - from rackets to shuttlecocks and accessories."
                             }
@@ -72,12 +72,12 @@ const ThemeHome = () => {
                     // Fallback to defaults if settings not available
                     setHeroSlides([
                         {
-                            image: "/src/assets/images/badminton-banner.webp",
+                            image: "https://via.placeholder.com/1600x600?text=Slide+1",
                             title: "Professional Badminton Rackets",
                             description: "Premium quality rackets designed for competitive performance and player comfort."
                         },
                         {
-                            image: "/src/assets/images/sports-gear-banner.webp",
+                            image: "https://via.placeholder.com/1600x600?text=Slide+2",
                             title: "Complete Sports Equipment",
                             description: "Everything you need for badminton - from rackets to shuttlecocks and accessories."
                         }
@@ -88,12 +88,12 @@ const ThemeHome = () => {
                 // Fallback on error
                 setHeroSlides([
                     {
-                        image: "/src/assets/images/badminton-banner.webp",
+                        image: "https://via.placeholder.com/1600x600?text=Slide+1",
                         title: "Professional Badminton Rackets",
                         description: "Premium quality rackets designed for competitive performance and player comfort."
                     },
                     {
-                        image: "/src/assets/images/sports-gear-banner.webp",
+                        image: "https://via.placeholder.com/1600x600?text=Slide+2",
                         title: "Complete Sports Equipment",
                         description: "Everything you need for badminton - from rackets to shuttlecocks and accessories."
                     }

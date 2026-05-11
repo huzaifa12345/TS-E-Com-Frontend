@@ -19,23 +19,36 @@ const WebsiteSettings = () => {
     try {
       setLoading(true);
       const response = await websiteSettingsApi.getWebsiteSettings();
-      if (response.success) {
-        setSettings(response.data);
+      const validData = response?.success && response?.data && typeof response.data === 'object' ? response.data : null;
+
+      if (validData) {
+        setSettings(validData);
         const previews = {};
-        Object.values(response.data).flat().forEach(setting => {
-          if (setting.type === 'image' && setting.value) {
+        Object.values(validData).flat().forEach(setting => {
+          if (setting?.type === 'image' && setting?.value) {
             previews[setting.id] = setting.value;
           }
         });
         setPreviewImages(previews);
       } else {
+        if (!silent) {
+          console.warn('WebsiteSettings: invalid settings response', response);
+        }
         const initResponse = await websiteSettingsApi.initializeSettings();
-        if (initResponse.success) fetchSettings(silent);
+        if (initResponse?.success) {
+          await fetchSettings(silent);
+        } else {
+          setSettings({});
+          setPreviewImages({});
+        }
       }
     } catch (error) {
+      console.error('WebsiteSettings fetchSettings error:', error);
       if (!silent) {
         toast.error('Failed to fetch website settings');
       }
+      setSettings({});
+      setPreviewImages({});
     } finally {
       setLoading(false);
     }
@@ -92,9 +105,11 @@ const WebsiteSettings = () => {
     setSettings(prev => {
       const updated = { ...prev };
       Object.keys(updated).forEach(category => {
-        updated[category] = updated[category].map(s => 
-          s.id === settingId ? { ...s, value } : s
-        );
+        if (Array.isArray(updated[category])) {
+          updated[category] = updated[category].map(s => 
+            s?.id === settingId ? { ...s, value } : s
+          );
+        }
       });
       return updated;
     });
@@ -204,19 +219,23 @@ const WebsiteSettings = () => {
               </div>
               <div className="card-body bg-white p-4">
                 <div className="row g-4">
-                  {categorySettings.map((setting) => (
-                    <div key={setting.id} className="col-lg-6">
-                      <div className="setting-box p-3 rounded-3 border bg-light bg-opacity-10">
-                        <div className="d-flex justify-content-between align-items-start mb-3">
-                          <div>
-                            <label className="form-label fw-bold text-dark mb-0">{setting.description}</label>
-                            <code className="d-block small text-primary" style={{ fontSize: '0.7rem' }}>CONFIG_KEY: {setting.key}</code>
+                  {Array.isArray(categorySettings)
+                    ? categorySettings.map((setting) => (
+                        <div key={setting?.id || `${category}-${Math.random()}`} className="col-lg-6">
+                          <div className="setting-box p-3 rounded-3 border bg-light bg-opacity-10">
+                            <div className="d-flex justify-content-between align-items-start mb-3">
+                              <div>
+                                <label className="form-label fw-bold text-dark mb-0">{setting?.description || 'Unnamed setting'}</label>
+                                <code className="d-block small text-primary" style={{ fontSize: '0.7rem' }}>
+                                  CONFIG_KEY: {setting?.key || 'unknown'}
+                                </code>
+                              </div>
+                            </div>
+                            {setting ? renderSettingInput(setting) : null}
                           </div>
                         </div>
-                        {renderSettingInput(setting)}
-                      </div>
-                    </div>
-                  ))}
+                      ))
+                    : null}
                 </div>
               </div>
             </div>
