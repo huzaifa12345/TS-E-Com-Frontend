@@ -19,7 +19,9 @@ const WebsiteSettings = () => {
     try {
       setLoading(true);
       const response = await websiteSettingsApi.getWebsiteSettings();
-      const validData = response?.success && response?.data && typeof response.data === 'object' ? response.data : null;
+      const rawData = response?.success && response?.data && typeof response.data === 'object' ? response.data : null;
+      // Must have at least one category with a non-empty array of settings
+      const validData = rawData && Object.values(rawData).some(arr => Array.isArray(arr) && arr.length > 0) ? rawData : null;
 
       if (validData) {
         setSettings(validData);
