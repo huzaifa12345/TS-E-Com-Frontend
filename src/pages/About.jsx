@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import TopBar from '../components/TopBar';
 import ThemeFooter from '../components/ThemeFooter';
-
+ 
 const About = () => {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#f8fafc' }}>
