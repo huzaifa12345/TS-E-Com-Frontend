@@ -5,7 +5,7 @@ import ThemeHome from './pages/ThemeHome';
 import About from './pages/About';
 import DynamicCategory from './pages/DynamicCategory';
 import ThemeProductDetail from './pages/ThemeProductDetail';
-import ProductDetail from './pages/ProductDetail';
+// import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Admin from './pages/Admin';
@@ -41,7 +41,7 @@ function App() {
                   <Route path="/admin" element={<Admin />} />
                   <Route path="/all-products" element={<AllProducts />} />
                   <Route path="/product/:id" element={<ThemeProductDetail />} />
-                  <Route path="/product-detail/:id" element={<ProductDetail />} />
+                  {/* <Route path="/product-detail/:id" element={<ProductDetail />} /> */}
                   <Route path="/category/:categorySlug" element={<DynamicCategory />} />
                   <Route path="/:categorySlug" element={<DynamicCategory />} />
                 </Routes>
