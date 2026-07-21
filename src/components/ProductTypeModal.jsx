@@ -218,7 +218,7 @@ const ProductModal = ({
                         <div>
                           <p className="small fw-bold text-dark mb-1">Batch Registration Note:</p>
                           <p className="text-muted mb-0" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
-                            Chemical industry standards require weight/volume inclusion in the title (e.g. <strong>"Cleaner 5 Litre"</strong>). 
+                            Sports industry standards require weight/volume inclusion in the title (e.g. <strong>"Cleaner 5 Litre"</strong>). 
                           </p>
                         </div>
                       </div>
@@ -237,7 +237,7 @@ const ProductModal = ({
                       className="form-control border-0 bg-light shadow-none"
                       style={{ borderRadius: '8px' }}
                       rows="2"
-                      placeholder="Add chemical composition, handling warnings, or storage requirements..."
+                      placeholder="Add sports-specific details, handling warnings, or storage requirements..."
                       value={productForm.description}
                       onChange={(e) => setProductForm({ ...productForm, description: e.target.value })}
                     ></textarea>

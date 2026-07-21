@@ -114,7 +114,7 @@ const SideDrawer = ({ isOpen, onClose }) => {
             {/* Footer */}
             <div className="drawer-footer">
               <img src={websiteLogo} alt="Logo" className="footer-mini-logo" />
-              <p className="copyright-text">© 2026 Chemical & Detergents</p>
+              <p className="copyright-text">© 2026 Tayyab Sports</p>
               <p className="codebase-tag">Powered by <span>CodeBase Solutions</span></p>
             </div>
           </motion.div>
