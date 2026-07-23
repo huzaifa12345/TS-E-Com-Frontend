@@ -15,16 +15,17 @@ html {
 }
 
 body {
-    color: #666666;
+    color: #2C2C2E;
     font-size: 14px;
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    background: #F8F9FA;
 }
 
 a {
-    color: #1f1f1f;
+    color: #2C2C2E;
     text-decoration: none !important;
     outline: none !important;
     -webkit-transition: all .3s ease-in-out;

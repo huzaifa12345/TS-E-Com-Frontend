@@ -40,7 +40,7 @@ const Cart = () => {
               <ShoppingBag size={80} />
             </div>
             <h1 className="navy-title mt-4">Your Cart is Empty</h1>
-            <p className="text-muted mb-5">Quality sports equipment is just a click away.</p>
+            <p className="text-muted mb-5">Explore trusted industrial chemical supplies and packaging essentials.</p>
             <Link to="/all-products" className="industrial-btn-primary px-5">
                RETURN TO SHOP
             </Link>
@@ -58,7 +58,7 @@ const Cart = () => {
       
       <div className="container py-5">
         <div className="cart-header-modern mb-4">
-          <h2 className="navy-title">Sports Shopping Cart</h2>
+          <h2 className="navy-title">Chemical Supply Cart</h2>
           <span className="item-count-badge">{itemsCount} Items Reserved</span>
         </div>
 
@@ -119,7 +119,7 @@ const Cart = () => {
               <div className="summary-line vertical">
                 <span>Shipping Method</span>
                 <select 
-                  className="sports-select" 
+                  className="cart-select" 
                   value={shippingMethod}
                   onChange={(e) => setShippingMethod(e.target.value)}
                 >

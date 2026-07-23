@@ -1,29 +1,29 @@
-/* --- Sports Cart Theme --- */
+/* --- Chemical Supply Cart Theme --- */
 :root {
-  --navy: #001d3d;
-  --navy-light: #003566;
-  --gold: #ffc300;
-  --border: #e2e8f0;
-  --white: #ffffff;
-  --bg-gray: #f8fafc;
+  --cart-charcoal: #2c2c2e;
+  --cart-charcoal-deep: #1c1c1e;
+  --cart-primary: #e86c24;
+  --cart-primary-hover: #d15b17;
+  --cart-border: #e5e7eb;
+  --cart-white: #ffffff;
+  --cart-bg: #f8f9fa;
 }
 
 .cart-page-wrapper {
-  background-color: var(--bg-gray);
+  background-color: var(--cart-bg);
   min-height: 100vh;
 }
 
-/* Header Section */
 .cart-header-modern {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--navy);
+  border-bottom: 2px solid var(--cart-charcoal);
   padding-bottom: 15px;
 }
 
 .navy-title {
-  color: var(--navy);
+  color: var(--cart-charcoal);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -0.5px;
@@ -31,21 +31,20 @@
 }
 
 .item-count-badge {
-  background: var(--navy);
-  color: var(--gold);
+  background: var(--cart-charcoal);
+  color: var(--cart-white);
   padding: 5px 15px;
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 700;
 }
 
-/* Items Card Styling */
 .cart-items-card {
-  background: var(--white);
+  background: var(--cart-white);
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: 25px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--cart-border);
 }
 
 .cart-item-row {
@@ -73,7 +72,7 @@
 }
 
 .item-name {
-  color: var(--navy);
+  color: var(--cart-charcoal);
   font-weight: 700;
   margin-bottom: 4px;
   font-size: 1.1rem;
@@ -88,7 +87,7 @@
 .remove-link {
   background: none;
   border: none;
-  color: #ef4444;
+  color: #dc2626;
   font-size: 0.8rem;
   font-weight: 600;
   display: flex;
@@ -98,7 +97,6 @@
   cursor: pointer;
 }
 
-/* Qty Stepper */
 .qty-stepper {
   display: flex;
   align-items: center;
@@ -112,7 +110,7 @@
   border: none;
   background: none;
   padding: 5px 12px;
-  color: var(--navy);
+  color: var(--cart-charcoal);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -128,13 +126,12 @@
   background: none;
   text-align: center;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--cart-charcoal);
 }
 
 .unit-price { font-size: 0.8rem; color: #64748b; display: block; }
-.total-price { color: var(--navy); font-weight: 800; font-size: 1rem; margin: 0; }
+.total-price { color: var(--cart-charcoal); font-weight: 800; font-size: 1rem; margin: 0; }
 
-/* Bottom Action Buttons (Continue & Clear) */
 .cart-footer-actions {
   display: flex;
   justify-content: space-between;
@@ -144,7 +141,7 @@
 }
 
 .btn-continue {
-  color: var(--navy);
+  color: var(--cart-charcoal);
   text-decoration: none;
   font-weight: 700;
   display: flex;
@@ -155,14 +152,14 @@
 }
 
 .btn-continue:hover {
-  color: var(--navy-light);
+  color: var(--cart-primary);
   transform: translateX(-3px);
 }
 
 .btn-clear-all {
-  background: #fff1f2;
-  color: #e11d48;
-  border: 1px solid #ffe4e6;
+  background: #fff7ed;
+  color: var(--cart-primary);
+  border: 1px solid #fed7aa;
   padding: 8px 20px;
   border-radius: 8px;
   font-weight: 700;
@@ -170,10 +167,9 @@
   cursor: pointer;
 }
 
-/* Order Summary Side */
 .order-summary-card {
-  background: var(--navy);
-  color: var(--white);
+  background: linear-gradient(180deg, #2c2c2e 0%, #1c1c1e 100%);
+  color: var(--cart-white);
   border-radius: 20px;
   padding: 25px;
   position: sticky;
@@ -181,12 +177,12 @@
 }
 
 .summary-title {
-  color: var(--gold);
+  color: #f5a66b;
   font-weight: 800;
   margin-bottom: 25px;
   text-transform: uppercase;
   font-size: 1.2rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 10px;
 }
 
@@ -203,7 +199,7 @@
   margin-bottom: 20px;
 }
 
-.sports-select {
+.cart-select {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.2);
   color: white;
@@ -213,7 +209,7 @@
   width: 100%;
 }
 
-.sports-select option { color: #000; }
+.cart-select option { color: #000; }
 
 .divider-dashed {
   border-top: 1px dashed rgba(255,255,255,0.2);
@@ -223,7 +219,7 @@
 .summary-line.total {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--gold);
+  color: #f5a66b;
   margin: 20px 0;
 }
 
@@ -232,8 +228,8 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: var(--gold);
-  color: var(--navy);
+  background: var(--cart-primary);
+  color: var(--cart-white);
   width: 100%;
   padding: 15px;
   border-radius: 12px;
@@ -244,12 +240,11 @@
 }
 
 .checkout-btn-full:hover {
-  background: #fff;
+  background: var(--cart-primary-hover);
   transform: translateY(-2px);
-  color: var(--navy);
+  color: var(--cart-white);
 }
 
-/* Trust Badges Section */
 .trust-badges-cart {
   text-align: center;
   margin-top: 25px;

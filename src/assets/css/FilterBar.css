@@ -1,13 +1,13 @@
-/* --- FilterBar Styles - Navy/Cyan Theme --- */
+/* --- FilterBar Styles - Brand Orange Theme --- */
 :root {
-  --fb-navy: #020c1b;
-  --fb-cyan: #00d4ff;
-  --fb-blue-deep: #0072ff;
+  --fb-navy: #2C2C2E;
+  --fb-cyan: #E86C24;
+  --fb-blue-deep: #D15B17;
   --fb-white: #ffffff;
-  --fb-bg-light: #f8fafc;
-  --fb-gray: #64748b;
-  --fb-border: #e2e8f0;
-  --fb-grad: linear-gradient(135deg, #00d4ff 0%, #0072ff 100%);
+  --fb-bg-light: #F8F9FA;
+  --fb-gray: #6C757D;
+  --fb-border: #E5E7EB;
+  --fb-grad: linear-gradient(135deg, #E86C24 0%, #D15B17 100%);
 }
 
 .fb-filter-bar {
@@ -43,7 +43,7 @@
 
 .fb-search-box:focus-within {
   border-color: var(--fb-cyan);
-  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(232, 108, 36, 0.16);
 }
 
 .fb-search-icon {
@@ -158,7 +158,7 @@
 
 .fb-sort-btn:hover {
   border-color: var(--fb-cyan);
-  box-shadow: 0 2px 8px rgba(0, 212, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(232, 108, 36, 0.16);
 }
 
 .fb-chevron { transition: transform 0.3s; }
@@ -202,7 +202,7 @@
 }
 
 .fb-sort-option.active {
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(232, 108, 36, 0.1);
   color: var(--fb-cyan);
   font-weight: 600;
 }
@@ -226,12 +226,12 @@
 
 .fb-filter-btn:hover {
   border-color: var(--fb-cyan);
-  box-shadow: 0 2px 8px rgba(0, 212, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(232, 108, 36, 0.16);
 }
 
 .fb-filter-btn.has-filters {
   border-color: var(--fb-cyan);
-  background: rgba(0, 212, 255, 0.05);
+  background: rgba(232, 108, 36, 0.08);
 }
 
 .fb-filter-badge {

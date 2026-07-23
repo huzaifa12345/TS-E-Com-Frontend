@@ -18,14 +18,14 @@ const Footer = () => {
           
           {/* Brand Identity */}
           <div className="ts-footer-col brand-col">
-            <img src={websiteLogo} alt="Tayyab Sports" className="ts-footer-logo" />
+            <img src={websiteLogo} alt="Saith Chemical" className="ts-footer-logo" />
             <p className="ts-brand-text">
-              Your ultimate destination for premium badminton gear in Gujranwala. We provide top-quality rackets, shuttlecocks, and professional stringing services.
+              Your trusted source for industrial chemicals, detergents, and cleaning essentials. We deliver reliable bulk supply with quality assurance and fast support.
             </p>
             <div className="ts-social-links">
               <a href="#" className="ts-social-icon"><FaFacebookF /></a>
               <a href="#" className="ts-social-icon"><FaInstagram /></a>
-              <a href="https://wa.me/923006468707" className="ts-social-icon"><FaWhatsapp /></a>
+              <a href="https://wa.me/923227594213" className="ts-social-icon"><FaWhatsapp /></a>
             </div>
           </div>
 
@@ -34,7 +34,7 @@ const Footer = () => {
             <h5 className="ts-footer-title">Quick Links</h5>
             <ul className="ts-footer-links-list">
               <li><Link to="/" onClick={handleScrollTop}><FaChevronRight /> Home</Link></li>
-              <li><Link to="/all-products" onClick={handleScrollTop}><FaChevronRight /> Shop Gear</Link></li>
+              <li><Link to="/all-products" onClick={handleScrollTop}><FaChevronRight /> Shop Supplies</Link></li>
               <li><Link to="/about" onClick={handleScrollTop}><FaChevronRight /> Our Story</Link></li>
               <li><Link to="/cart" onClick={handleScrollTop}><FaChevronRight /> My Cart</Link></li>
             </ul>
@@ -48,14 +48,14 @@ const Footer = () => {
                 <FaHeadset className="ts-c-icon" />
                 <div>
                   <small>Call / WhatsApp</small>
-                  <p>+92 300 6468707</p>
+                  <p>+92 322 7594213</p>
                 </div>
               </div>
               <div className="ts-c-card">
-                <FaMapMarkerAlt className="ts-c-icon" />
+                <FaMapMarkerAlt className="ts-c-icon-location" />
                 <div>
                   <small>Visit Store</small>
-                  <p>Lari Adda, Gujranwala</p>
+                  <p>Saith Chemical, R/O Shop No.D-2490 Near Mosque Qadir, koocha Dogran Alam Market, Lahore, Pakistan</p>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@ const Footer = () => {
         <div className="ts-footer-bottom-bar">
           <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
             <p className="ts-copyright">
-              &copy; 2026 <b>Tayyab Sports</b>. All rights reserved.
+              &copy; 2026 <b>Saith Chemical</b>. All rights reserved.
             </p>
             <p className="ts-powered-by">
               Developed by <span className="ts-company-highlight">CodeBase Solutions</span>

@@ -1,16 +1,16 @@
-/* --- Tayyab Sports Badminton Theme Styles (Light) --- */
+/* --- Brand-Aligned E-Commerce Theme Styles (Light) --- */
 :root {
-    --ts-navy: #020c1b;
-    --ts-darker: #010812;
-    --ts-cyan: #00d4ff;
-    --ts-blue-deep: #0072ff;
-    --ts-white: #ffffff;
-    --ts-text-gray: #64748b;
-    --ts-bg-light: #f8fafc;
-    --grad-electric: linear-gradient(135deg, #00d4ff 0%, #0072ff 100%);
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
-    --glass: rgba(255, 255, 255, 0.8);
+    --ts-navy: #2C2C2E;
+    --ts-darker: #1C1C1E;
+    --ts-cyan: #E86C24;
+    --ts-blue-deep: #D15B17;
+    --ts-white: #FFFFFF;
+    --ts-text-gray: #6C757D;
+    --ts-bg-light: #F8F9FA;
+    --grad-electric: linear-gradient(135deg, #E86C24 0%, #D15B17 100%);
+    --shadow-sm: 0 4px 6px -1px rgba(44, 44, 46, 0.12);
+    --shadow-md: 0 14px 35px -12px rgba(44, 44, 46, 0.18);
+    --glass: rgba(255, 255, 255, 0.9);
 }
 
 .home-modern-layout {
@@ -65,7 +65,7 @@
     box-shadow: var(--shadow-sm);
     display: inline-block;
     margin-bottom: 25px;
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    border: 1px solid rgba(232, 108, 36, 0.22);
 }
 
 .hero-title {
@@ -92,7 +92,7 @@
 
 .btn-main {
     background: var(--grad-electric);
-    color: var(--ts-navy);
+    color: var(--ts-white);
     padding: 16px 35px;
     border-radius: 14px;
     text-decoration: none;
@@ -102,17 +102,18 @@
     gap: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
+    box-shadow: 0 10px 24px rgba(232, 108, 36, 0.25);
 }
 
 .btn-main:hover {
-    background: linear-gradient(135deg, #0072ff 0%, #00d4ff 100%);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.25);
+    background: linear-gradient(135deg, #D15B17 0%, #E86C24 100%);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 14px 28px rgba(232, 108, 36, 0.35);
     color: var(--ts-white);
 }
 
 .btn-sec {
-    border: 2px solid #e2e8f0;
+    border: 2px solid #E5E7EB;
     padding: 14px 35px;
     border-radius: 14px;
     color: var(--ts-navy);
@@ -123,9 +124,9 @@
 }
 
 .btn-sec:hover {
-    background: #f1f5f9;
-    border-color: var(--ts-cyan);
-    color: var(--ts-navy);
+    background: var(--ts-navy);
+    border-color: var(--ts-navy);
+    color: var(--ts-white);
 }
 
 /* --- Hero Image Visuals --- */
@@ -284,19 +285,20 @@
     background: var(--ts-white);
     border-radius: 24px;
     padding: 15px;
-    border: 1px solid #f1f5f9;
+    border: 1px solid #E5E7EB;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(44, 44, 46, 0.06);
 }
 
 .item-card:hover {
     transform: translateY(-12px);
     box-shadow: var(--shadow-md);
-    border-color: rgba(0, 212, 255, 0.2);
+    border-color: rgba(232, 108, 36, 0.25);
 }
 
 .item-thumb {
     height: 350px;
-    background: #f8fafc;
+    background: #F8F9FA;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
@@ -339,7 +341,7 @@
     border-radius: 50%;
     border: none;
     background: var(--grad-electric);
-    color: var(--ts-navy);
+    color: var(--ts-white);
     font-size: 1.3rem;
     cursor: pointer;
     display: flex;
@@ -398,7 +400,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: linear-gradient(135deg, #E86C24 0%, #D15B17 100%);
   color: white;
   font-size: 0.7rem;
   font-weight: 700;
@@ -407,7 +409,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   z-index: 10;
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 4px 12px rgba(232, 108, 36, 0.3);
   border: 2px solid white;
 }
 
@@ -446,14 +448,15 @@
     border-radius: 10px;
     padding: 10px 12px;
     background: var(--grad-electric);
-    color: var(--ts-navy);
+    color: var(--ts-white);
     font-weight: 700;
     transition: 0.3s;
 }
 
 .card-buy-btn:hover {
-    background: linear-gradient(135deg, #0072ff 0%, #00d4ff 100%);
+    background: linear-gradient(135deg, #D15B17 0%, #E86C24 100%);
     color: var(--ts-white);
+    transform: translateY(-2px);
 }
 
 /* --- Features Strip --- */

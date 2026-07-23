@@ -160,7 +160,7 @@ const AllProducts = () => {
           </div>
         ) : products.length === 0 ? (
           <div className="text-center py-5">
-            <h4 className="text-muted">No Sports products found</h4>
+            <h4 className="text-muted">No chemical products found</h4>
             <p>Try adjusting your search query</p>
           </div>
         ) : (

@@ -1,19 +1,32 @@
 import { motion } from 'framer-motion';
 import TopBar from '../components/TopBar';
 import ThemeFooter from '../components/ThemeFooter';
+import { useState } from 'react';
+import SideDrawer from '../components/SideDrawer';
  
 const About = () => {
+
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#f8fafc' }}>
+    <div
+      style={{
+        width: '100%',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        background: 'linear-gradient(180deg, #fff7ed 0%, #f8fafc 55%, #eef2f7 100%)'
+      }}
+    >
       {/* Header */}
-      <header className="modern-header">
-        <div className="container">
-          <TopBar onMenuToggle={() => {}} />
+      <header className="modern-header" style={{ width: '100%' }}>
+        <div className="container-fluid px-0">
+          <TopBar onMenuToggle={() => setSideDrawerOpen(true)} />
+          <SideDrawer isOpen={sideDrawerOpen} onClose={() => setSideDrawerOpen(false)} />
         </div>
       </header>
 
       {/* Hero / Intro */}
-      <section className="container py-5">
+      <section className="container-fluid px-3 px-md-4 py-5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,10 +35,10 @@ const About = () => {
         >
           <div className="col-lg-7 mb-4 mb-lg-0">
             <h1 className="fw-bold mb-3" style={{ color: '#111827' }}>
-              About <span style={{ color: '#3498db' }}>Tayyab Sports Shop</span>
+              About <span style={{ color: '#3498db' }}>Saith Chemical</span>
             </h1>
             <p className="lead" style={{ color: '#4b5563' }}>
-              Tayyab Sports Shop is a premier destination for quality badminton equipment and sports gear that has been serving players and enthusiasts since <strong>1999</strong>. We combine decades of expertise, premium products and passion for sports to provide equipment that helps champions perform at their best every single time.
+              Saith Chemical is a trusted supplier of industrial chemicals, detergents, and cleaning solutions serving businesses and households with dependable quality and consistent performance.
             </p>
           </div>
           <div className="col-lg-5">
@@ -41,17 +54,16 @@ const About = () => {
               </h5>
               <ul className="list-unstyled mb-0" style={{ color: '#374151', fontSize: 14 }}>
                 <li className="mb-2">
-                  • Founded in <strong>1999</strong> with a simple mission: provide premium quality sports
-                  equipment for every player level.
+                  • Serving industrial, commercial, and domestic customers with a dependable range of chemical and detergent solutions.
                 </li>
                 <li className="mb-2">
-                  • Thousands of satisfied players who trust our equipment, quality and expert guidance.
+                  • Trusted by buyers who value product quality, safety, and timely supply.
                 </li>
                 <li className="mb-2">
-                  • Specialized collection of badminton rackets, shuttlecocks and accessories.
+                  • Focused on detergents, cleaning agents, and specialized industrial formulations.
                 </li>
                 <li>
-                  • Based in Pakistan, serving players nationwide through our store and online shop.
+                  • Based in Pakistan, delivering reliable service through our store and online platform.
                 </li>
               </ul>
             </div>
@@ -60,18 +72,17 @@ const About = () => {
       </section>
 
       {/* Brand Story */}
-      <section className="container pb-5">
+      <section className="container-fluid px-3 px-md-4 pb-5">
         <div className="row">
           <div className="col-lg-7 mb-4">
             <h3 className="fw-bold mb-3" style={{ color: '#111827' }}>
               Our Story
             </h3>
             <p style={{ color: '#4b5563', lineHeight: 1.7 }}>
-              Tayyab Sports Shop started in 1999 as a specialized venture to bring premium badminton equipment to players of all levels. We saw players struggling to choose between cheap alternatives and expensive professional gear, so we decided to build a brand that delivers both – <strong>quality</strong> and{' '}
-              <strong>affordability</strong>.
+              Saith Chemical was built to serve customers who need dependable chemical products, trusted sourcing, and consistent supply for commercial and household use.
             </p>
             <p style={{ color: '#4b5563', lineHeight: 1.7 }}>
-              Today, Tayyab Sports Shop is a recognised name in sports industry with a strong reputation, latest equipment arrivals every season and a loyal customer base that relies on our consistent quality. From professional badminton rackets to training accessories, every product is selected to handle real‑world challenges: competitive matches, training sessions, recreational play and everything in between.
+              Today, we are recognized for quality formulations, reliable fulfillment, and a customer-first approach focused on safe, effective solutions for cleaning and industrial operations.
             </p>
           </div>
           <div className="col-lg-5 mb-4">
@@ -81,16 +92,16 @@ const About = () => {
               </h4>
               <ul className="list-unstyled mb-0" style={{ color: '#4b5563', fontSize: 14 }}>
                 <li className="mb-2">
-                  • <strong>Premium quality equipment</strong> – professional grade, durable and performance-focused.
+                  • <strong>Premium quality supply</strong> – dependable chemical products built for real-world use.
                 </li>
                 <li className="mb-2">
-                  • <strong>Expert selection</strong> – carefully chosen badminton rackets and gear for all skill levels.
+                  • <strong>Expert selection</strong> – carefully curated detergents and cleaning formulations for every need.
                 </li>
                 <li className="mb-2">
-                  • <strong>Competitive pricing</strong> – professional quality without breaking the bank.
+                  • <strong>Competitive pricing</strong> – trusted performance without unnecessary overhead.
                 </li>
                 <li>
-                  • <strong>Personalized service</strong> – we guide players to choose the perfect equipment.
+                  • <strong>Personalized service</strong> – we guide buyers toward the right solutions for their operations.
                 </li>
               </ul>
             </div>
@@ -108,13 +119,13 @@ const About = () => {
             <div className="col-md-6">
               <h3 className="fw-bold mb-3">Our Vision</h3>
               <p style={{ lineHeight: 1.7 }}>
-                To be the most trusted badminton equipment supplier in the region – a brand that professional players rely on for competitive performance and enthusiasts choose for quality and value.
+                To be the most trusted chemical and detergent supplier in the region, delivering quality, consistency, and dependable service for every customer.
               </p>
             </div>
             <div className="col-md-6">
               <h3 className="fw-bold mb-3">Our Promise</h3>
               <p style={{ lineHeight: 1.7 }}>
-                Every order from Tayyab Sports Shop should deliver complete satisfaction: from equipment quality and performance to packaging, delivery experience and expert support.
+                Every order from Saith Chemical is backed by responsible sourcing, reliable delivery, and attentive support.
               </p>
             </div>
           </div>

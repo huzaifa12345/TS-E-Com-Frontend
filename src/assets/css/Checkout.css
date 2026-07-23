@@ -1,13 +1,13 @@
 /* --- CHECKOUT PAGE THEME (UNIQUE PREFIX: ch-) --- */
 
 :root {
-  --ch-navy-deep: #0a192f;
-  --ch-navy-light: #112240;
-  --ch-gold-metallic: #d4af37;
-  --ch-gold-bright: #f1d279;
-  --ch-sports-grey: #ccd6f6;
+  --ch-charcoal-deep: #1c1c1e;
+  --ch-charcoal: #2c2c2e;
+  --ch-primary: #e86c24;
+  --ch-primary-hover: #d15b17;
+  --ch-soft-grey: #cbd5e1;
   --ch-white: #ffffff;
-  --ch-success-gold: #b8860b;
+  --ch-success-gold: #f59e0b;
 }
 
 .ch-checkout-page-wrapper {
@@ -15,12 +15,10 @@
   min-height: 100vh;
 }
 
-/* Stepper - Professional Look */
 .ch-stepper-container {
   display: flex;
   justify-content: space-between;
   position: relative;
-  /* max-width: 800px; */
   margin: 0 auto 3rem;
 }
 
@@ -38,21 +36,21 @@
   height: 45px;
   border-radius: 12px;
   background: #fff;
-  border: 2px solid var(--ch-sports-grey);
+  border: 2px solid var(--ch-soft-grey);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ch-sports-grey);
+  color: var(--ch-soft-grey);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .ch-step-item-new.active .ch-step-circle {
-  background: var(--ch-navy-deep);
-  border-color: var(--ch-gold-metallic);
-  color: var(--ch-gold-metallic);
+  background: var(--ch-charcoal-deep);
+  border-color: var(--ch-primary);
+  color: var(--ch-primary);
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(10, 25, 47, 0.2);
+  box-shadow: 0 10px 15px rgba(28, 28, 30, 0.18);
 }
 
 .ch-step-label {
@@ -65,7 +63,7 @@
 }
 
 .ch-step-item-new.active .ch-step-label {
-  color: var(--ch-navy-deep);
+  color: var(--ch-charcoal-deep);
 }
 
 .ch-step-connector {
@@ -74,23 +72,22 @@
   left: 50%;
   width: 100%;
   height: 2px;
-  background: var(--ch-sports-grey);
+  background: var(--ch-soft-grey);
   z-index: -1;
 }
 
-/* Sports Cards */
 .ch-industrial-card {
   background: #fff;
   border-radius: 15px;
   padding: 30px;
-  border: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 .ch-section-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--ch-navy-deep);
+  color: var(--ch-charcoal-deep);
   margin-bottom: 25px;
   display: flex;
   align-items: center;
@@ -101,11 +98,10 @@
 .ch-industrial-title {
   font-family: 'Inter', sans-serif;
   font-weight: 800;
-  color: var(--ch-navy-deep);
+  color: var(--ch-charcoal-deep);
   letter-spacing: -0.5px;
 }
 
-/* Form Styling */
 .ch-form-label-ind {
   font-size: 12px;
   font-weight: 700;
@@ -126,13 +122,12 @@
 
 .ch-form-control-ind:focus {
   outline: none;
-  border-color: var(--ch-gold-metallic);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  border-color: var(--ch-primary);
+  box-shadow: 0 0 0 3px rgba(232, 108, 36, 0.1);
 }
 
-/* Buttons */
 .ch-btn-gold {
-  background: linear-gradient(135deg, var(--ch-gold-metallic), #b8860b);
+  background: linear-gradient(135deg, var(--ch-primary), var(--ch-primary-hover));
   color: #fff;
   border: none;
   padding: 12px 25px;
@@ -149,14 +144,14 @@
 
 .ch-btn-gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(184, 134, 11, 0.4);
+  box-shadow: 0 5px 15px rgba(232, 108, 36, 0.35);
   color: #fff;
 }
 
 .ch-btn-outline-ind {
   background: transparent;
-  border: 2px solid var(--ch-navy-deep);
-  color: var(--ch-navy-deep);
+  border: 2px solid var(--ch-charcoal-deep);
+  color: var(--ch-charcoal-deep);
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: 600;
@@ -165,11 +160,10 @@
 }
 
 .ch-btn-outline-ind:hover {
-  background: var(--ch-navy-deep);
+  background: var(--ch-charcoal-deep);
   color: #fff;
 }
 
-/* Payment Options */
 .ch-payment-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -187,8 +181,8 @@
 }
 
 .ch-payment-option.active {
-  border-color: var(--ch-gold-metallic);
-  background: rgba(212, 175, 55, 0.05);
+  border-color: var(--ch-primary);
+  background: rgba(232, 108, 36, 0.05);
 }
 
 .ch-option-check {
@@ -202,21 +196,20 @@
 }
 
 .ch-payment-option.active .ch-option-check {
-  background: var(--ch-gold-metallic);
-  border-color: var(--ch-gold-metallic);
+  background: var(--ch-primary);
+  border-color: var(--ch-primary);
 }
 
-/* Order Summary Sidebar */
 .ch-order-sidebar {
-  background: var(--ch-navy-deep);
+  background: linear-gradient(180deg, #2c2c2e 0%, #1c1c1e 100%);
   color: #fff;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 20px 40px rgba(10, 25, 47, 0.15);
+  box-shadow: 0 20px 40px rgba(28, 28, 30, 0.18);
 }
 
 .ch-sidebar-title {
-  color: var(--ch-gold-metallic);
+  color: #f5a66b;
   font-weight: 800;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   padding-bottom: 15px;
@@ -243,12 +236,12 @@
   font-size: 13px;
   font-weight: 600;
   margin: 0;
-  color: var(--ch-sports-grey);
+  color: #e2e8f0;
 }
 
 .ch-item-qty {
   font-size: 11px;
-  color: #8892b0;
+  color: #94a3b8;
   margin: 0;
 }
 
@@ -261,23 +254,22 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: #8892b0;
+  color: #cbd5e1;
   font-size: 14px;
 }
 
 .ch-cost-line.total {
   margin-top: 15px;
-  color: var(--ch-gold-metallic);
+  color: #f5a66b;
   font-size: 1.25rem;
   font-weight: 800;
 }
 
-/* Utility */
-.ch-text-gold { color: var(--ch-gold-metallic); }
+.ch-text-gold { color: var(--ch-primary); }
 
 .ch-payment-details-box {
   background: #f8fafc;
-  border-left: 4px solid var(--ch-gold-metallic);
+  border-left: 4px solid var(--ch-primary);
   padding: 20px;
   border-radius: 0 12px 12px 0;
   margin-top: 20px;
@@ -290,7 +282,6 @@
   font-size: 14px;
 }
 
-/* Success Card */
 .ch-success-card {
   max-width: 500px;
   margin: 50px auto;
@@ -303,7 +294,7 @@
 .ch-success-icon-wrap {
   width: 80px;
   height: 80px;
-  background: var(--ch-gold-metallic);
+  background: var(--ch-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;

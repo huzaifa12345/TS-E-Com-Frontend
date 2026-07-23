@@ -103,7 +103,7 @@ const DynamicCategory = () => {
   if (loading) return (
     <div className="ct-loader-wrapper d-flex flex-column justify-content-center align-items-center vh-100">
       <div className="spinner-border text-primary" role="status"></div>
-      <p className="mt-3 fw-bold text-navy">Loading Sports Catalog...</p>
+      <p className="mt-3 fw-bold text-navy">Loading Chemical Catalog...</p>
     </div>
   );
 

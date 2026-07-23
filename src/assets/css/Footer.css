@@ -1,11 +1,11 @@
 :root {
-    --ts-navy: #020c1b;
-    --ts-darker: #010812;
-    --ts-cyan: #00d4ff;
-    --ts-blue-deep: #0072ff;
-    --ts-text-gray: #a8b2d1;
+    --ts-navy: #2C2C2E;
+    --ts-darker: #1C1C1E;
+    --ts-cyan: #E86C24;
+    --ts-blue-deep: #D15B17;
+    --ts-text-gray: #CFD2D6;
     --ts-white: #ffffff;
-    --grad-electric: linear-gradient(135deg, #00d4ff 0%, #0072ff 100%);
+    --grad-electric: linear-gradient(135deg, #E86C24 0%, #D15B17 100%);
 }
 
 .ts-footer-main {
@@ -26,7 +26,11 @@
 .ts-footer-logo {
     height: 120px;
     margin-bottom: 20px;
-    filter: drop-shadow(0 0 8px var(--ts-cyan));
+    background: #ffffff;
+    padding: 12px 16px;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(28, 28, 30, 0.12);
+    filter: drop-shadow(0 0 20px rgba(232, 108, 36, 0.749));
 }
 
 .ts-brand-text {
@@ -119,7 +123,7 @@
 }
 
 .ts-c-icon { color: var(--ts-cyan); font-size: 20px; }
-
+.ts-c-icon-location { color: var(--ts-cyan); font-size: 38px; }
 .ts-c-card p { margin: 0; font-size: 14px; font-weight: 600; }
 .ts-c-card small { color: var(--ts-text-gray); display: block; margin-bottom: 2px; }
 

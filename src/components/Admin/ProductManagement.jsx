@@ -25,7 +25,7 @@ const Products = ({
                   <Package size={22} className="text-primary" /> 
                   Inventory Stock
                 </h5>
-                <p className="text-muted small mb-0">Manage sports equipment and products</p>
+                <p className="text-muted small mb-0">Manage chemical and detergent inventory</p>
               </div>
               
               <div className="col-md-8">
@@ -83,7 +83,7 @@ const Products = ({
                           <div className="d-flex align-items-center">
                             <div className="bg-light rounded p-1 me-3 border shadow-sm" style={{ width: '50px', height: '50px' }}>
                               <img 
-                                src={product.image_url || '/placeholder-sports.png'} 
+                                src={product.image_url || '/placeholder-chemical.png'} 
                                 alt={product.name} 
                                 className="w-100 h-100 rounded" 
                                 style={{ objectFit: 'contain' }}

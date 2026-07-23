@@ -79,7 +79,7 @@ const ProductModal = ({
                             type="text"
                             className="form-control border-0 bg-light p-2 shadow-none"
                             style={{ borderRadius: '8px' }}
-                            placeholder="e.g. Rackets, Shuttles, Grips ..."
+                            placeholder="e.g. Detergents, Cleaners, Chemicals ..."
                             value={productForm.name}
                             onChange={(e) => setProductForm({ ...productForm, name: e.target.value })}
                           />
@@ -218,7 +218,7 @@ const ProductModal = ({
                         <div>
                           <p className="small fw-bold text-dark mb-1">Batch Registration Note:</p>
                           <p className="text-muted mb-0" style={{ fontSize: '0.75rem', lineHeight: '1.4' }}>
-                            Sports industry standards require weight/volume inclusion in the title (e.g. <strong>"Cleaner 5 Litre"</strong>). 
+                            Chemical product listings should include concentration or pack size in the title (e.g. <strong>"Cleaner 5 Litre"</strong>). 
                           </p>
                         </div>
                       </div>
@@ -237,7 +237,7 @@ const ProductModal = ({
                       className="form-control border-0 bg-light shadow-none"
                       style={{ borderRadius: '8px' }}
                       rows="2"
-                      placeholder="Add sports-specific details, handling warnings, or storage requirements..."
+                      placeholder="Add chemical details, handling warnings, or storage requirements..."
                       value={productForm.description}
                       onChange={(e) => setProductForm({ ...productForm, description: e.target.value })}
                     ></textarea>

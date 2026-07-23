@@ -1,55 +1,53 @@
-/* --- TAYYAB SPORTS PREMIUM THEME (FIXED ALIGNMENT) --- */
+/* --- TAYYAB CHEMICALS PREMIUM THEME (BRAND-ALIGNED) --- */
 :root {
-    --ts-navy: #020c1b;
-    --ts-darker: #010812;
-    --ts-cyan: #00d4ff;
-    --ts-blue-deep: #0072ff;
-    --ts-white: #ffffff;
-    --ts-text-gray: #a8b2d1;
-    
-    --grad-electric: linear-gradient(135deg, #00d4ff 0%, #0072ff 100%);
-    --grad-hover: linear-gradient(135deg, #0072ff 0%, #00d4ff 100%);
+    --brand-primary: #E86C24;
+    --brand-primary-hover: #D15B17;
+    --brand-charcoal: #f8f8f9;
+    --brand-charcoal-deep: #1C1C1E;
+    --brand-white: #FFFFFF;
+    --brand-muted: #6C757D;
+    --brand-bg: #F8F9FA;
+    --brand-border: #E5E7EB;
+    --brand-shadow: 0 12px 35px -16px rgba(44, 44, 46, 0.22);
 }
-/* .ts-main-nav{
-    background-color: #002357;
-} */
+
 .ts-header {
     width: 100%;
-    background: var(--ts-navy);
+    background: var(--brand-charcoal);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: var(--brand-shadow);
 }
 
-/* 1. Top Utility Strip - Spacing Fixed */
 .ts-utility {
-    background: var(--ts-darker);
+    background: var(--brand-charcoal-deep);
     padding: 10px 0;
     font-size: 12px;
-    color: var(--ts-text-gray);
-    border-bottom: 2px solid var(--ts-cyan);
-    border-top: 2px solid var(--ts-cyan);
+    color: var(--brand-white);
+    border-bottom: 2px solid var(--brand-primary);
+    border-top: 2px solid var(--brand-primary);
 }
 
 .ts-u-left, .ts-auth-link {
     display: flex;
     align-items: center;
-    gap: 10px; /* Support aur Mic icon ke darmiyan space */
-    color: var(--ts-cyan);
+    gap: 10px;
+    color: var(--brand-primary);
 }
 
 .ts-auth-link {
-    color: var(--ts-cyan);
+    color: var(--brand-primary);
     text-decoration: none;
     font-weight: 600;
     position: relative;
     padding-bottom: 2px;
 }
- 
-/* "Hi Hamza" Hover Border */
+
 .ts-auth-link:hover {
-    color: var(--ts-cyan);
+    color: var(--brand-primary-hover);
 }
+
 .ts-auth-link::after {
     content: '';
     position: absolute;
@@ -57,14 +55,14 @@
     height: 2px;
     bottom: -2px;
     left: 0;
-    background: var(--ts-cyan);
+    background: var(--brand-primary);
     transition: width 0.3s ease;
 }
+
 .ts-auth-link:hover::after {
     width: 100%;
 }
 
-/* 2. Main Nav Layout */
 .ts-nav-container {
     display: flex;
     justify-content: space-between;
@@ -78,19 +76,18 @@
     align-items: center;
 }
 
-.ts-nav-right { 
-    justify-content: flex-end; 
-    gap: 25px; /* Links aur Cart ke darmiyan space */
+.ts-nav-right {
+    justify-content: flex-end;
+    gap: 25px;
 }
 
-/* Desktop Links & Hover Border */
-.ts-desktop-links { 
+.ts-desktop-links {
     display: flex;
-    gap: 25px; 
+    gap: 25px;
 }
 
 .ts-link {
-    color: var(--ts-white);
+    color: var(--brand-primary);
     text-decoration: none;
     font-weight: 700;
     font-size: 13px;
@@ -107,7 +104,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background: var(--ts-cyan);
+    background: var(--brand-primary);
     transition: width 0.3s ease;
 }
 
@@ -116,13 +113,12 @@
 }
 
 .ts-link:hover, .active-link {
-    color: var(--ts-cyan);
+    color: var(--brand-primary);
 }
 
-/* Cart Button - Spacing Fixed */
 .ts-cart-btn {
-    background: var(--grad-electric);
-    color: var(--ts-white);
+    background: var(--brand-primary);
+    color: var(--brand-white);
     width: 44px;
     height: 44px;
     padding: 0;
@@ -135,7 +131,8 @@
     gap: 0;
     border: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.25);
+    box-shadow: 0 8px 20px rgba(232, 108, 36, 0.717);
+    /* border: 2px solid rgb(0, 0, 0); */
 }
 
 .ts-cart-icon-box {
@@ -155,32 +152,30 @@
     padding: 0 5px;
     border-radius: 999px;
     background: #ffffff;
-    color: var(--ts-cyan);
+    color: var(--brand-primary);
     font-size: 10px;
     font-weight: 800;
     line-height: 18px;
     text-align: center;
-    border: 2px solid var(--ts-cyan);
+    border: 2px solid var(--brand-primary);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .ts-cart-btn:hover {
-    background: var(--grad-hover);
+    background: var(--brand-primary-hover);
     transform: translateY(-2px);
-    color: var(--ts-navy);
+    color: var(--brand-white);
 }
 
-/* Logo & Toggle */
 .ts-logo {
     height: 120px;
-    width: auto; 
-    filter: drop-shadow(0 0 8px var(--ts-cyan));
+    width: auto;
+    filter: drop-shadow(0 0 8px rgba(232, 108, 36, 0.3));
 }
 
 .ts-menu-toggle {
-    background: var(--grad-electric);
-    /* border: 1.5px solid var(--ts-cyan); */
-    color: var(--ts-white);
+    background: var(--brand-primary);
+    color: var(--brand-white);
     width: 44px;
     height: 44px;
     padding: 0;
@@ -189,27 +184,28 @@
     justify-content: center;
     border-radius: 8px;
     cursor: pointer;
-}
-.ts-menu-toggle:hover {
-    background: var(--grad-hover);
-    transform: translateY(-2px);
-    color: var(--ts-navy);
+        box-shadow: 0 8px 20px rgba(232, 108, 36, 0.717);
+    /* border: 2px solid rgb(0, 0, 0); */
 }
 
-/* 3. Trust Bar */
+.ts-menu-toggle:hover {
+    background: var(--brand-primary-hover);
+    transform: translateY(-2px);
+    color: var(--brand-white);
+}
+
 .ts-trust-bar {
-    background: var(--ts-darker);
-    color: var(--ts-cyan);
+    background: var(--brand-charcoal);
+    color: var(--brand-primary);
     padding: 10px 0;
     text-align: center;
     font-size: 11px;
     font-weight: 900;
     text-transform: uppercase;
-     border-bottom: 2px solid var(--ts-cyan);
-    border-top: 2px solid var(--ts-cyan);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-top: 2px solid rgba(0, 0, 0);
 }
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
     .ts-logo { height: 80px; }
     .ts-desktop-links { display: none; }

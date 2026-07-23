@@ -2,17 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Full width layout fix */
+:root {
+  --brand-primary: #E86C24;
+  --brand-primary-hover: #D15B17;
+  --brand-charcoal: #2C2C2E;
+  --brand-charcoal-deep: #1C1C1E;
+  --brand-bg: #F8F9FA;
+  --brand-surface: #FFFFFF;
+  --brand-text: #2C2C2E;
+  --brand-muted: #6C757D;
+  --brand-border: #E5E7EB;
+  --brand-shadow: 0 12px 35px -16px rgba(44, 44, 46, 0.22);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  background: var(--brand-bg);
+  color: var(--brand-text);
+  font-family: 'Inter', 'Poppins', sans-serif;
 }
 
 #root {
@@ -26,13 +42,11 @@ html, body {
   background: none;
 }
 
-/* Remove default margins and padding */
 .container {
   max-width: 100%;
-  padding: 0 40px; /* Increased horizontal padding for more space */
+  padding: 0 40px;
 }
 
-/* Full width sections */
 .banner_bg_main,
 .main-header-wrapper,
 .footer-section {
@@ -42,7 +56,6 @@ html, body {
   padding-right: 0;
 }
 
-/* Ensure header spans full width */
 .main-header-wrapper {
   position: relative;
   width: 100vw;
@@ -68,4 +81,43 @@ html, body {
   position: relative;
   left: 0;
   transform: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(232, 108, 36, 0.18);
+}
+
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:hover {
+  background: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+  color: #fff !important;
+}
+
+.btn-outline-secondary,
+.btn-outline-dark {
+  border-color: var(--brand-charcoal) !important;
+  color: var(--brand-charcoal) !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-dark:hover {
+  background: var(--brand-charcoal) !important;
+  color: #fff !important;
 }

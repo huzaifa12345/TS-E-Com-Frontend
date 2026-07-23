@@ -42,7 +42,7 @@ const Admin = () => {
 
   const sidebarItems = [
     { id: 'dashboard', name: 'Analytics Hub', icon: LayoutDashboard },
-    { id: 'products', name: 'Sports Equipment', icon: Package }, 
+    { id: 'products', name: 'Chemical Inventory', icon: Package }, 
     { id: 'categories', name: 'Categories', icon: Tags },
     { id: 'orders', name: 'Orders', icon: Truck },
     { id: 'website-settings', name: 'Settings', icon: Settings },
@@ -160,12 +160,15 @@ const Admin = () => {
 
   return (
     <ProtectedRoute adminOnly={true}>
-      <div className="admin-wrapper" style={{ backgroundColor: '#f8fafc', minHeight: '100vh' }}>
+      <div className="admin-wrapper" style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(180deg, #fff7ed 0%, #f8fafc 55%, #eef2f7 100%)'
+      }}>
         
-        {/* --- REFINED SPORTS ADMIN TOPBAR --- */}
+        {/* --- REFINED SAITH CHEMICAL ADMIN TOPBAR --- */}
         <header className="sticky-top w-100 shadow-lg" style={{ 
-          background: '#0f172a', 
-          borderBottom: '3px solid #0284c7',
+          background: 'linear-gradient(135deg, #111827 0%, #0f172a 100%)', 
+          borderBottom: '3px solid #f26522',
           zIndex: 1050
         }}>
           <div className="container-fluid px-4">
@@ -177,12 +180,12 @@ const Admin = () => {
                   <Menu size={24} />
                 </button>
                 <div className="d-flex align-items-center gap-3">
-                  <div className="bg-primary p-2 rounded-3 shadow-lg d-flex align-items-center justify-content-center" style={{ width: '42px', height: '42px' }}>
+                  <div className="p-2 rounded-3 shadow-lg d-flex align-items-center justify-content-center" style={{ width: '42px', height: '42px', background: 'linear-gradient(135deg, #f26522, #fb923c)' }}>
                     <Trophy size={22} className="text-white" />
                   </div>
                   <div className="d-flex flex-column">
-                    <span className="text-white fw-bold m-0" style={{ fontSize: '1.2rem', letterSpacing: '1px', lineHeight: '1.1' }}>SPORTS-SYNC</span>
-                    <span className="text-primary fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '2px' }}>TAYYAB SPORTS</span>
+                    <span className="text-white fw-bold m-0" style={{ fontSize: '1.2rem', letterSpacing: '1px', lineHeight: '1.1' }}>SAITH CHEMICAL</span>
+                    <span className="fw-bold" style={{ fontSize: '0.65rem', letterSpacing: '2px', color: '#fb923c' }}>CONTROL PANEL</span>
                   </div>
                 </div>
               </div>
@@ -229,15 +232,27 @@ const Admin = () => {
             {/* SIDEBAR */}
             {sidebarOpen && (
               <div className="col-lg-3">
-                <div className="card border-0 shadow-sm p-3" style={{ borderRadius: '20px', position: 'sticky', top: '100px' }}>
+                <div className="card border-0 shadow-sm p-3" style={{ borderRadius: '20px', position: 'sticky', top: '100px', background: '#ffffff', border: '1px solid rgba(242,101,34,0.12)' }}>
                   <div className="list-group list-group-flush border-0">
                     {sidebarItems.map((item) => (
                       <button
                         key={item.id}
                         onClick={() => setActiveTab(item.id)}
                         className={`list-group-item list-group-item-action border-0 rounded-4 mb-2 py-3 px-4 d-flex align-items-center ${
-                          activeTab === item.id ? 'bg-primary text-white shadow-lg fw-bold' : 'text-secondary'
+                          activeTab === item.id ? 'fw-bold shadow-lg text-white' : 'text-secondary'
                         }`}
+                        style={
+                          activeTab === item.id
+                            ? {
+                                background: 'linear-gradient(135deg, #f26522 0%, #fb923c 100%)',
+                                color: '#fff',
+                                boxShadow: '0 12px 24px rgba(242,101,34,0.22)'
+                              }
+                            : {
+                                background: '#f8fafc',
+                                color: '#475569'
+                              }
+                        }
                       >
                         <item.icon size={19} className="me-3" />
                         <span>{item.name}</span>
@@ -250,7 +265,7 @@ const Admin = () => {
 
             {/* MAIN CONTENT */}
             <div className={`col-lg-${sidebarOpen ? '9' : '12'}`}>
-              <div className="content-area">
+              <div className="content-area" style={{ background: 'rgba(255,255,255,0.65)', borderRadius: '24px', padding: '8px' }}>
                 {activeTab === 'dashboard' && <Dashboard stats={stats} products={products} categories={categories} />}
                 {activeTab === 'products' && (
                   <Products 

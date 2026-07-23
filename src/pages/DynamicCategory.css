@@ -1,9 +1,9 @@
 /* --- DYNAMIC CATEGORY THEME (UNIQUE PREFIX: ct-) --- */
 :root {
-  --ct-navy: #001d3d;
-  --ct-navy-light: #003566;
-  --ct-gold: #ffc300;
-  --ct-gray-bg: #f8f9fa;
+  --ct-navy: #2C2C2E;
+  --ct-navy-light: #1C1C1E;
+  --ct-gold: #E86C24;
+  --ct-gray-bg: #F8F9FA;
   --ct-white: #ffffff;
 }
 
@@ -14,7 +14,7 @@
 
 /* Hero Section */
 .ct-category-hero {
-  background: radial-gradient(circle at 50% 50%, #003566 0%, #001d3d 100%);
+  background: radial-gradient(circle at 50% 50%, #1C1C1E 0%, #2C2C2E 100%);
   padding: 40px 0;
   color: var(--ct-white);
   border-bottom: 5px solid var(--ct-gold);
@@ -98,7 +98,7 @@
 }
 
 .ct-search-btn-primary {
-  background: var(--ct-navy);
+  background: var(--ct-gold);
   color: var(--ct-white);
   border: none;
   padding: 12px 30px;
@@ -108,8 +108,8 @@
 }
 
 .ct-search-btn-primary:hover {
-  background: var(--ct-gold);
-  color: var(--ct-navy);
+  background: #D15B17;
+  color: var(--ct-white);
 }
 
 /* ThemeHome style product cards */

@@ -198,7 +198,7 @@ const WebsiteSettings = () => {
           <h4 className="fw-bold mb-1 text-dark d-flex align-items-center gap-2">
             <Settings size={24} className="text-primary" /> Configuration Console
           </h4>
-          <p className="text-muted small mb-0">Manage global variables and sports brand identity</p>
+          <p className="text-muted small mb-0">Manage global variables and chemical brand identity</p>
         </div>
         <div className="btn-group shadow-sm">
           <button className="btn btn-outline-primary bg-white px-3" onClick={fetchSettings}>

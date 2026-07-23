@@ -4,14 +4,14 @@ import { Package, ShoppingCart, DollarSign, Tags } from 'lucide-react';
 const Dashboard = ({ stats, products, categories }) => {
   return (
     <div className="row">
-      {/* Stats Cards - Kids Colours Theme */}
+      {/* Stats Cards - Saith Chemical Theme */}
       <div className="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
-        <div className="card" style={{ backgroundColor: '#f26522', color: 'white' }}>
+        <div className="card border-0 shadow-sm" style={{ background: 'linear-gradient(135deg, #f26522 0%, #fb923c 100%)', color: 'white', borderRadius: '18px' }}>
           <div className="card-body">
             <div className="row align-items-center">
               <div className="col">
-                <h5 className="card-title mb-0">Total Products</h5>
-                <h2 className="mb-0">{stats.totalProducts || 0}</h2>
+                <h5 className="card-title mb-0 fw-semibold">Total Products</h5>
+                <h2 className="mb-0 fw-bold">{stats.totalProducts || 0}</h2>
               </div>
               <div className="col-auto">
                 <Package size={32} />
@@ -22,12 +22,12 @@ const Dashboard = ({ stats, products, categories }) => {
       </div>
 
       <div className="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
-        <div className="card" style={{ backgroundColor: '#007bff', color: 'white' }}>
+        <div className="card border-0 shadow-sm" style={{ borderRadius: '18px' }}>
           <div className="card-body">
             <div className="row align-items-center">
               <div className="col">
-                <h5 className="card-title mb-0">Total Orders</h5>
-                <h2 className="mb-0">{stats.totalOrders || 0}</h2>
+                <h5 className="card-title mb-0 fw-semibold">Total Orders</h5>
+                <h2 className="mb-0 fw-bold">{stats.totalOrders || 0}</h2>
               </div>
               <div className="col-auto">
                 <ShoppingCart size={32} />
@@ -38,12 +38,12 @@ const Dashboard = ({ stats, products, categories }) => {
       </div>
 
       <div className="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
-        <div className="card" style={{ backgroundColor: '#28a745', color: 'white' }}>
+        <div className="card border-0 shadow-sm" style={{ background: 'linear-gradient(135deg, #fb923c 0%, #f59e0b 100%)', color: 'white', borderRadius: '18px' }}>
           <div className="card-body">
             <div className="row align-items-center">
               <div className="col">
-                <h5 className="card-title mb-0">Total Revenue</h5>
-                <h2 className="mb-0">{(stats.totalRevenue || 0).toFixed(2)}</h2>
+                <h5 className="card-title mb-0 fw-semibold">Total Revenue</h5>
+                <h2 className="mb-0 fw-bold">{(stats.totalRevenue || 0).toFixed(2)}</h2>
               </div>
               <div className="col-auto">
                 <DollarSign size={32} />
@@ -55,9 +55,9 @@ const Dashboard = ({ stats, products, categories }) => {
 
       {/* Top Products */}
       <div className="col-lg-6 mb-4">
-        <div className="card">
-          <div className="card-header" style={{ backgroundColor: '#262626', color: 'white' }}>
-            <h5 className="mb-0" style={{ color: 'white' }}>Top Products</h5>
+        <div className="card border-0 shadow-sm" style={{ borderRadius: '18px' }}>
+          <div className="card-header border-0" style={{ background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)', color: 'white', borderTopLeftRadius: '18px', borderTopRightRadius: '18px' }}>
+            <h5 className="mb-0 fw-semibold" style={{ color: 'white' }}>Top Products</h5>
           </div>
           <div className="card-body">
             {products.slice(0, 5).map((product) => (
@@ -95,9 +95,9 @@ const Dashboard = ({ stats, products, categories }) => {
 
       {/* Categories */}
       <div className="col-lg-6 mb-4">
-        <div className="card">
-          <div className="card-header" style={{ backgroundColor: '#262626', color: 'white' }}>
-            <h5 className="mb-0" style={{ color: 'white' }}>Categories</h5>
+        <div className="card border-0 shadow-sm" style={{ borderRadius: '18px' }}>
+          <div className="card-header border-0" style={{ background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)', color: 'white', borderTopLeftRadius: '18px', borderTopRightRadius: '18px' }}>
+            <h5 className="mb-0 fw-semibold" style={{ color: 'white' }}>Categories</h5>
           </div>
           <div className="card-body">
             {categories.map((category) => (
@@ -109,7 +109,7 @@ const Dashboard = ({ stats, products, categories }) => {
                     <small className="text-muted">{category.description || 'No description'}</small>
                   </div>
                 </div>
-                <span className="badge badge-primary">{category.product_count || 0} products</span>
+                <span className="badge" style={{ backgroundColor: '#f26522', color: 'white', padding: '0.45rem 0.7rem', borderRadius: '999px' }}>{category.product_count || 0} products</span>
               </div>
             ))}
           </div>
