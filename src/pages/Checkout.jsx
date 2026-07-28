@@ -275,8 +275,8 @@ const Checkout = () => {
 
                   {paymentInfo.method !== 'cod' && (
                     <div className="ch-payment-details-box animate-fadeIn">
-                       <div className="ch-info-row"><span>Account Name:</span> <strong>MUHAMMAD SHAFIQUE RAZA</strong></div>
-                       <div className="ch-info-row"><span>Account/Phone:</span> <strong>03006468707</strong></div>
+                       <div className="ch-info-row"><span>Account Name:</span> <strong>Saith Chemical</strong></div>
+                       <div className="ch-info-row"><span>Account/Phone:</span> <strong>03227594213</strong></div>
                        <hr className="my-3 opacity-10" />
                        <div className="row g-3">
                           <div className="col-md-6">

@@ -225,7 +225,7 @@ const ThemeHome = () => {
                                     className="hero-img"
                                 />
                                 <div className="floating-badge">
-                                    <FaStar /> <span>#1 in Gujranwala</span>
+                                    <FaStar /> <span>#1 in Lahore</span>
                                 </div>
                             </div>
                         </div>
@@ -293,8 +293,8 @@ const ThemeHome = () => {
                 <div className="container">
                     <div className="feature-grid">
                         <div className="feat-box"><FaTruck className="f-icon" /> <div><h6>Fast Delivery</h6><p>Same day dispatch</p></div></div>
-                        <div className="feat-box"><FaShieldAlt className="f-icon" /> <div><h6>Authentic Gear</h6><p>100% Original products</p></div></div>
-                        <div className="feat-box"><FaHeadset className="f-icon" /> <div><h6>Best Stringing</h6><p>Professional service</p></div></div>
+                        <div className="feat-box"><FaShieldAlt className="f-icon" /> <div><h6>Tested Chemicals</h6><p>100% Original products</p></div></div>
+                        <div className="feat-box"><FaHeadset className="f-icon" /> <div><h6>24/7 Support</h6><p>Professional service</p></div></div>
                     </div>
                 </div>
             </section>
