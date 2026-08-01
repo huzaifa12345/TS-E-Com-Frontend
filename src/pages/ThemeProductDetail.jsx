@@ -222,6 +222,9 @@ const ThemeProductDetail = () => {
 
               <div className="spec-card mb-4">
                 <p><strong>SKU:</strong> {product.sku || 'IND-786'}</p>
+                {product.barcode && (
+                  <p><strong>Barcode:</strong> <code style={{ backgroundColor: '#f0f0f0', padding: '4px 8px', borderRadius: '4px', fontFamily: 'monospace' }}>{product.barcode}</code></p>
+                )}
                 <p className="description-text">{product.description}</p>
               </div>
 

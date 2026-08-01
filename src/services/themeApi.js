@@ -246,6 +246,11 @@ export const themeApi = {
     return response.data;
   },
 
+  changePassword: async (passwordData) => {
+    const response = await api.put('/auth/change-password', passwordData);
+    return response.data;
+  },
+
   // Reviews
   getProductReviews: async (productId) => {
     const response = await api.get(`/reviews/product/${productId}`);

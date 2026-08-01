@@ -160,6 +160,20 @@ const ProductModal = ({
                             onChange={(e) => setProductForm({ ...productForm, stock_quantity: e.target.value })}
                           />
                         </div>
+                        <div className="col-md-6">
+                          <label className="form-label small fw-bold text-muted mb-1">Barcode / EAN</label>
+                          <input
+                            type="text"
+                            className="form-control border-0 bg-light shadow-none"
+                            style={{ borderRadius: '8px' }}
+                            placeholder="e.g. 1234567890123 (Optional)"
+                            value={productForm.barcode || ''}
+                            onChange={(e) => setProductForm({ ...productForm, barcode: e.target.value })}
+                          />
+                          <small className="text-muted d-block mt-1" style={{ fontSize: '0.7rem' }}>
+                            Product barcode/EAN for inventory tracking
+                          </small>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -24,7 +24,7 @@ const TopBar = ({ onMenuToggle }) => {
             <span className="d-none d-sm-inline">Support:</span> +92 322 7594213
           </div>
           <div className="ts-u-right">
-             <Link to={user ? "/profile" : "/login"} className="ts-auth-link">
+             <Link to={user ? "/" : "/login"} className="ts-auth-link">
                 <FaUser className="ts-accent-text me-2" />
                 <span>{user?.first_name ? `Hi, ${user.first_name}` : 'Login'}</span>
              </Link>

@@ -127,8 +127,8 @@ const Login = () => {
               <span>Keep me signed in</span>
             </label>
 
-            <Link to="/forgot-password" size={18} className="lg-forgot">
-              Forgot Password?
+            <Link to="/change-password" size={18} className="lg-forgot">
+              Change Password
             </Link>
           </div>
 

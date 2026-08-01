@@ -37,7 +37,7 @@ const Admin = () => {
 
   const [productForm, setProductForm] = useState({
     name: '', description: '', price: '', category_id: '',
-    stock_quantity: '', image_url: '', images: [], status: 'active'
+    stock_quantity: '', image_url: '', images: [], status: 'active', barcode: ''
   });
 
   const sidebarItems = [
@@ -74,7 +74,7 @@ const Admin = () => {
 
   const handleAddProduct = () => {
     setEditingProduct(null);
-    setProductForm({ name: '', description: '', price: '', category_id: '', stock_quantity: '', status: 'active' });
+    setProductForm({ name: '', description: '', price: '', category_id: '', stock_quantity: '', status: 'active', barcode: '' });
     fetchNextSku();
     setShowProductForm(true);
   };
