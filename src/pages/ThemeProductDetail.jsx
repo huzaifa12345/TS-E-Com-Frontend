@@ -189,7 +189,7 @@ const ThemeProductDetail = () => {
           {/* Details Section */}
           <div className="col-lg-6">
             <div className="product-content-box">
-              <span className="category-badge">Chemicals</span>
+              <span className="category-badge">Home Care & Cleaning Product</span>
               <h1 className="product-main-title">{product.name}</h1>
               
               <div className="d-flex align-items-center gap-2 mb-3">

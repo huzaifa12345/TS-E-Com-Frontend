@@ -81,7 +81,7 @@ const SideDrawer = ({ isOpen, onClose }) => {
 
               {/* Dynamic Categories Section */}
               <div className="drawer-section">
-                <label className="section-label">Industrial Categories</label>
+                <label className="section-label">Product Categories</label>
                 <ul className="cat-list">
                   {categories.map((category) => (
                     <li key={category.id} className="cat-item" onClick={() => { navigate(`/category/${category.id}`); onClose(); }}>

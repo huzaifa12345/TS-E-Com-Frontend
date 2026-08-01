@@ -270,8 +270,9 @@
 }
 
 .card-buy-btn:hover {
-  background: linear-gradient(135deg, #0072ff 0%, #00d4ff 100%);
-  color: var(--ap-white);
+    background: linear-gradient(135deg, #D15B17 0%, #E86C24 100%);
+    color: var(--ts-white);
+    transform: translateY(-2px);
 }
 
 /* Pagination */
@@ -475,5 +476,50 @@
     width: 36px;
     height: 36px;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .item-details {
+    padding: 10px 3px 6px;
+  }
+
+  .item-name {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+
+  .item-pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .price-now {
+    font-size: 0.9rem;
+    font-weight: 700;
+    order: 2;
+  }
+
+  .price-original {
+    font-size: 0.65rem;
+    order: 1;
+  }
+
+  .discount-badge {
+    font-size: 0.55rem;
+    padding: 2px 4px;
+    order: 0;
+    flex-shrink: 0;
+  }
+
+  .card-buy-btn {
+    margin-top: 6px;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
   }
 }

@@ -38,7 +38,7 @@ const About = () => {
               About <span style={{ color: '#3498db' }}>Saith Chemical</span>
             </h1>
             <p className="lead" style={{ color: '#4b5563' }}>
-              Saith Chemical is a trusted supplier of industrial chemicals, detergents, and cleaning solutions serving businesses and households with dependable quality and consistent performance.
+              Saith Chemical is a trusted supplier of home care chemicals, detergents, and cleaning solutions serving businesses and households with dependable quality and consistent performance.
             </p>
           </div>
           <div className="col-lg-5">
@@ -54,13 +54,13 @@ const About = () => {
               </h5>
               <ul className="list-unstyled mb-0" style={{ color: '#374151', fontSize: 14 }}>
                 <li className="mb-2">
-                  • Serving industrial, commercial, and domestic customers with a dependable range of chemical and detergent solutions.
+                  • Serving Home Care, commercial, and domestic customers with a dependable range of chemical and detergent solutions.
                 </li>
                 <li className="mb-2">
                   • Trusted by buyers who value product quality, safety, and timely supply.
                 </li>
                 <li className="mb-2">
-                  • Focused on detergents, cleaning agents, and specialized industrial formulations.
+                  • Focused on detergents, cleaning agents, and specialized formulations.
                 </li>
                 <li>
                   • Based in Pakistan, delivering reliable service through our store and online platform.
@@ -82,7 +82,7 @@ const About = () => {
               Saith Chemical was built to serve customers who need dependable chemical products, trusted sourcing, and consistent supply for commercial and household use.
             </p>
             <p style={{ color: '#4b5563', lineHeight: 1.7 }}>
-              Today, we are recognized for quality formulations, reliable fulfillment, and a customer-first approach focused on safe, effective solutions for cleaning and industrial operations.
+              Today, we are recognized for quality formulations, reliable fulfillment, and a customer-first approach focused on safe, effective solutions for cleaning and home care operations.
             </p>
           </div>
           <div className="col-lg-5 mb-4">

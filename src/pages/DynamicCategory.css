@@ -309,8 +309,9 @@
 }
 
 .card-buy-btn:hover {
-  background: linear-gradient(135deg, #0072ff 0%, #00d4ff 100%);
-  color: #ffffff;
+    background: linear-gradient(135deg, #D15B17 0%, #E86C24 100%);
+    color: var(--ts-white);
+    transform: translateY(-2px);
 }
 /* Pagination */
 .ct-pagination-wrapper {

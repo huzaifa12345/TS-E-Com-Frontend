@@ -35,7 +35,7 @@ const ProductModal = ({
         <div className="modal-dialog modal-lg border-0 shadow-lg" style={{ maxWidth: '850px', width: '95%' }}>
           <div className="modal-content border-0 overflow-hidden" style={{ borderRadius: '24px', maxHeight: '92vh' }}>
             
-            {/* Header - Industrial Navy */}
+            {/* Header - Home Care */}
             <div className="modal-header border-0 p-4 align-items-center" style={{ backgroundColor: '#0f172a', color: 'white' }}>
               <div className="d-flex align-items-center gap-3">
                 <div className="rounded-3 p-2 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#0284c7' }}>
@@ -74,7 +74,7 @@ const ProductModal = ({
                       </h6>
                       <div className="row g-3">
                         <div className="col-12">
-                          <label className="form-label small fw-bold text-muted mb-1">Product Formulation Name</label>
+                          <label className="form-label small fw-bold text-muted mb-1">Product Name</label>
                           <input
                             type="text"
                             className="form-control border-0 bg-light p-2 shadow-none"
@@ -85,7 +85,7 @@ const ProductModal = ({
                           />
                         </div>
                         <div className="col-md-6">
-                          <label className="form-label small fw-bold text-muted mb-1">SKU / Batch Code</label>
+                          <label className="form-label small fw-bold text-muted mb-1">SKU</label>
                           <div className="input-group">
                             <span className="input-group-text border-0 bg-light text-muted" style={{ borderTopLeftRadius: '8px', borderBottomLeftRadius: '8px' }}>
                               <Hash size={14} />
@@ -161,7 +161,7 @@ const ProductModal = ({
                           />
                         </div>
                         <div className="col-md-6">
-                          <label className="form-label small fw-bold text-muted mb-1">Barcode / EAN</label>
+                          <label className="form-label small fw-bold text-muted mb-1">Barcode</label>
                           <input
                             type="text"
                             className="form-control border-0 bg-light shadow-none"
@@ -171,7 +171,7 @@ const ProductModal = ({
                             onChange={(e) => setProductForm({ ...productForm, barcode: e.target.value })}
                           />
                           <small className="text-muted d-block mt-1" style={{ fontSize: '0.7rem' }}>
-                            Product barcode/EAN for inventory tracking
+                            Product barcode for inventory tracking
                           </small>
                         </div>
                       </div>

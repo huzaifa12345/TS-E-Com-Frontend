@@ -360,6 +360,12 @@
     padding: 20px 8px 10px 8px;
 }
 
+@media (max-width: 768px) {
+    .item-details{
+         padding: 12px 4px 8px;
+    }
+}
+
 .item-pricing {
     display: flex;
     align-items: center;
@@ -367,6 +373,37 @@
     gap: 8px;
     text-align: center;
     flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+    .item-pricing {
+        gap: 4px;
+        flex-wrap: nowrap;
+    }
+
+    .price-now {
+        font-size: 0.9rem;
+    }
+
+    .price-original {
+        font-size: 0.65rem;
+    }
+
+    .discount-badge {
+        font-size: 0.55rem;
+        padding: 2px 4px;
+    }
+
+    .item-name {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+
+    .card-buy-btn {
+        margin-top: 6px;
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
 }
 
 .price-now {

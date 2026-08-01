@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="ts-footer-col brand-col">
             <img src={websiteLogo} alt="Saith Chemical" className="ts-footer-logo" />
             <p className="ts-brand-text">
-              Your trusted source for industrial chemicals, detergents, and cleaning essentials. We deliver reliable bulk supply with quality assurance and fast support.
+              Your trusted source for home care chemicals, detergents, and cleaning essentials. We deliver reliable bulk supply with quality assurance and fast support.
             </p>
             <div className="ts-social-links">
               <a href="#" className="ts-social-icon"><FaFacebookF /></a>
@@ -34,7 +34,7 @@ const Footer = () => {
             <h5 className="ts-footer-title">Quick Links</h5>
             <ul className="ts-footer-links-list">
               <li><Link to="/" onClick={handleScrollTop}><FaChevronRight /> Home</Link></li>
-              <li><Link to="/all-products" onClick={handleScrollTop}><FaChevronRight /> Shop Supplies</Link></li>
+              <li><Link to="/all-products" onClick={handleScrollTop}><FaChevronRight />All Products</Link></li>
               <li><Link to="/about" onClick={handleScrollTop}><FaChevronRight /> Our Story</Link></li>
               <li><Link to="/cart" onClick={handleScrollTop}><FaChevronRight /> My Cart</Link></li>
             </ul>

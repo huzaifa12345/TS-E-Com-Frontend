@@ -72,7 +72,7 @@ const TopBar = ({ onMenuToggle }) => {
       {/* 3. Trust Bar */}
       <div className="ts-trust-bar">
         <div className="container">
-          <p className="m-0"><FaBolt className="me-2" />Trusted Supplier of Premium Industrial & Laboratory Chemicals</p>
+          <p className="m-0"><FaBolt className="me-2" />Trusted Supplier of Premium Home Care Products</p>
         </div>
       </div>
     </header>
