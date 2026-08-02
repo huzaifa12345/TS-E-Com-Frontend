@@ -209,7 +209,7 @@
 .btn-buy-now:hover {
   background: linear-gradient(135deg, #D15B17 0%, #E86C24 100%) !important;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3) !important;
+  box-shadow: 0 8px 20px rgba(232, 108, 36, 0.3) !important;
   color: var(--ts-white) !important;
 }
 
