@@ -363,7 +363,7 @@ import ThemeFooter from '../components/ThemeFooter';
 import '../assets/css/ThemeProductDetail.css';
 
 const ThemeProductDetail = () => {
-  const { id } = useParams();
+  const { barcode } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const [product, setProduct] = useState(null);
@@ -382,7 +382,7 @@ const ThemeProductDetail = () => {
   useEffect(() => {
     fetchProduct();
     fetchSizes();
-  }, [id]);
+  }, [barcode]);
 
   const fetchSizes = async () => {
     try {
@@ -396,30 +396,30 @@ const ThemeProductDetail = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      setReviewsLoading(true);
-      try {
-        const reviewsData = await themeApi.getProductReviews(id);
-        setReviews(reviewsData?.reviews || []);
-      } catch (error) {
-        setReviews([]);
-      } finally {
-        setReviewsLoading(false);
-      }
-    };
-    if (id) fetchReviews();
-  }, [id]);
+  // Reviews are loaded after product is fetched (so we have the numeric product id)
 
   const fetchProduct = async () => {
     try {
       setLoading(true);
-      const productData = await themeApi.getProductById(id);
+      const productData = await themeApi.getProductById(barcode);
       setProduct(productData);
-      
+
       // Set selected image to first image if available
-      if (productData.images && productData.images.length > 0) {
+      if (productData?.images && productData.images.length > 0) {
         setSelectedImage(0);
+      }
+
+      // Fetch reviews using the actual numeric product id when available
+      try {
+        if (productData && productData.id) {
+          setReviewsLoading(true);
+          const reviewsData = await themeApi.getProductReviews(productData.id);
+          setReviews(reviewsData?.reviews || []);
+        }
+      } catch (err) {
+        setReviews([]);
+      } finally {
+        setReviewsLoading(false);
       }
     } catch (error) {
       toast.error('Failed to load product');
@@ -469,15 +469,17 @@ const ThemeProductDetail = () => {
         customer_name: name.trim(),
         rating: ratingValue,
         comment: comment.trim(),
-        product_id: id
+        product_id: product?.id || null
       };
       
       await themeApi.createReview(reviewData);
       toast.success('Review submitted successfully!');
       e.target.reset();
       
-      const reviewsData = await themeApi.getProductReviews(id);
-      setReviews(reviewsData?.reviews || []);
+      if (product && product.id) {
+        const reviewsData = await themeApi.getProductReviews(product.id);
+        setReviews(reviewsData?.reviews || []);
+      }
       
     } catch (error) {
       toast.error('Failed to submit review: ' + (error.response?.data?.error || error.message));

@@ -88,7 +88,7 @@ const AllProducts = () => {
       whileHover={{ y: viewMode === 'grid' ? -12 : 0 }}
       className={`item-card ${viewMode === 'list' ? 'list-card' : ''}`}
     >
-      <div className="item-thumb" onClick={() => navigate(`/product/${product.id}`)}>
+      <div className="item-thumb" onClick={() => navigate(`/product/${product.barcode || product.id}`)}>
         <img 
           src={product.images?.[0] || product.image_url || '/placeholder.png'} 
           alt={product.name} 
@@ -101,7 +101,7 @@ const AllProducts = () => {
         )}
         <div className="item-overlay">
           <button onClick={(e) => { e.stopPropagation(); handleAddToCart(product); }} className="circle-btn"><ShoppingCart /></button>
-          <button onClick={() => navigate(`/product/${product.id}`)} className="circle-btn"><ArrowRight /></button>
+          <button onClick={() => navigate(`/product/${product.barcode || product.id}`)} className="circle-btn"><ArrowRight /></button>
         </div>
       </div>
       
@@ -122,7 +122,7 @@ const AllProducts = () => {
         </div>
         <div className="item-inline-actions">
           <button onClick={(e) => { e.stopPropagation(); handleAddToCart(product); }} className="circle-btn item-inline-btn"><ShoppingCart /></button>
-          <button onClick={() => navigate(`/product/${product.id}`)} className="circle-btn item-inline-btn"><ArrowRight /></button>
+          <button onClick={() => navigate(`/product/${product.barcode || product.id}`)} className="circle-btn item-inline-btn"><ArrowRight /></button>
         </div>
       </div>
     </motion.div>

@@ -141,7 +141,7 @@ const DynamicCategory = () => {
           ) : (
             filteredProducts.map((product) => (
                 <div key={product.id} className={`item-card ${viewMode === 'list' ? 'list-card' : ''}`}>
-                  <div className="item-thumb" onClick={() => navigate(`/product/${product.id}`)}>
+                  <div className="item-thumb" onClick={() => navigate(`/product/${product.barcode || product.id}`)}>
                     <img 
                       src={product.images?.[0] || product.image_url || '/placeholder.png'} 
                       alt={product.name} 
@@ -154,7 +154,7 @@ const DynamicCategory = () => {
                     )}
                     <div className="item-overlay">
                       <button onClick={() => handleAddToCart(product)} className="circle-btn"><FaShoppingCart /></button>
-                      <button onClick={() => navigate(`/product/${product.id}`)} className="circle-btn"><FaSearch /></button>
+                      <button onClick={() => navigate(`/product/${product.barcode || product.id}`)} className="circle-btn"><FaSearch /></button>
                     </div>
                   </div>
                   
@@ -175,7 +175,7 @@ const DynamicCategory = () => {
                     </div>
                     <div className="item-inline-actions">
                       <button onClick={() => handleAddToCart(product)} className="circle-btn item-inline-btn"><FaShoppingCart /></button>
-                      <button onClick={() => navigate(`/product/${product.id}`)} className="circle-btn item-inline-btn"><FaSearch /></button>
+                      <button onClick={() => navigate(`/product/${product.barcode || product.id}`)} className="circle-btn item-inline-btn"><FaSearch /></button>
                     </div>
                   </div>
                 </div>

@@ -264,7 +264,7 @@ const ThemeHome = () => {
                                         )}
                                         <div className="item-overlay">
                                             <button onClick={() => handleAddToCart(product)} className="circle-btn"><FaShoppingCart /></button>
-                                            <button onClick={() => navigate(`/product/${product.id}`)} className="circle-btn"><FaSearch /></button>
+                                            <button onClick={() => navigate(`/product/${product.barcode || product.id}`)} className="circle-btn"><FaSearch /></button>
                                         </div>
                                     </div>
                                     <div className="item-details">
