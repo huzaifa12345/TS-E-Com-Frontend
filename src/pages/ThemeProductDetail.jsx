@@ -396,20 +396,16 @@ const ThemeProductDetail = () => {
     }
   };
 
-  // Reviews are loaded after product is fetched (so we have the numeric product id)
-
   const fetchProduct = async () => {
     try {
       setLoading(true);
       const productData = await themeApi.getProductById(barcode);
       setProduct(productData);
 
-      // Set selected image to first image if available
       if (productData?.images && productData.images.length > 0) {
         setSelectedImage(0);
       }
 
-      // Fetch reviews using the actual numeric product id when available
       try {
         if (productData && productData.id) {
           setReviewsLoading(true);
@@ -492,32 +488,44 @@ const ThemeProductDetail = () => {
     </div>
   );
 
-  // Generate Structured Data (JSON-LD Schema) for Google Search Console & Indexing
+  // 🌟 Enhanced Schema Markup for Google Rich Snippets (Price, Star Ratings & Availability)
+  const avgRating = reviews.length > 0 
+    ? (reviews.reduce((acc, curr) => acc + curr.rating, 0) / reviews.length).toFixed(1) 
+    : null;
+
   const schemaMarkup = product ? {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": product.name,
-    "image": product.images && product.images.length > 0 ? product.images : [product.image_url],
-    "description": product.description,
+    "image": product.images && product.images.length > 0 ? product.images : [product.image_url || 'https://www.saithchemicals.com/placeholder.png'],
+    "description": product.description || "Saith Chemical premium product.",
     "sku": product.sku || `SKU-${product.id}`,
-    // Map barcode to gtin13 if available for accurate barcode lookup on Google
     ...(product.barcode && { "gtin13": product.barcode }),
     "brand": {
       "@type": "Brand",
-      "name": "Grace Plus"
+      "name": "Saith Chemical"
     },
     "offers": {
       "@type": "Offer",
       "url": window.location.href,
       "priceCurrency": "PKR",
       "price": product.discount_price || product.price,
-      "availability": "https://schema.org/InStock"
-    }
+      "priceValidUntil": "2027-12-31",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": product.stock === 0 ? "https://schema.org/OutOfStock" : "https://schema.org/InStock"
+    },
+    ...(avgRating && {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": avgRating,
+        "reviewCount": reviews.length
+      }
+    })
   } : null;
 
   return (
     <div className="detail-page-wrapper">
-      {/* Dynamic Injection of JSON-LD Schema Markup */}
+      {/* Schema Injection */}
       {schemaMarkup && (
         <script
           type="application/ld+json"
@@ -565,7 +573,7 @@ const ThemeProductDetail = () => {
                   ))}
                   <span className="ms-2">{reviews.length > 0 ? (reviews.reduce((a,b)=>a+b.rating,0)/reviews.length).toFixed(1) : "N/A"}</span>
                 </div>
-                <span className="text-muted">({reviews.length} Verified Reviews)</span>
+                <span className="text-muted ml-1">({reviews.length} Verified Reviews)</span>
               </div>
 
               <div className="price-display mb-4">
