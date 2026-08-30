@@ -351,6 +351,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { FaStar, FaTruck, FaShoppingCart, FaShieldAlt, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
 import { ShoppingCart, Star, Truck, Shield } from 'lucide-react';
 import { themeApi } from '../services/themeApi';
@@ -525,6 +526,25 @@ const ThemeProductDetail = () => {
 
   return (
     <div className="detail-page-wrapper">
+      {/* Helmet Meta Tags Injection */}
+      {product && (
+        <Helmet>
+          <title>{`${product.name} | Saith Chemical`}</title>
+          <meta 
+            name="description" 
+            content={product.description ? product.description.substring(0, 160) : `${product.name} available at Saith Chemical`} 
+          />
+          <link rel="canonical" href={`https://www.saithchemicals.com/product/${product.barcode}`} />
+          
+          {/* Open Graph Tags for Social Sharing & Crawlers */}
+          <meta property="og:title" content={`${product.name} | Saith Chemical`} />
+          <meta property="og:description" content={product.description ? product.description.substring(0, 160) : `${product.name} available at Saith Chemical`} />
+          <meta property="og:image" content={product.images?.[0] || product.image_url || 'https://www.saithchemicals.com/placeholder.png'} />
+          <meta property="og:url" content={`https://www.saithchemicals.com/product/${product.barcode}`} />
+          <meta property="og:type" content="product" />
+        </Helmet>
+      )}
+
       {/* Schema Injection */}
       {schemaMarkup && (
         <script
