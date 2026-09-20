@@ -34,6 +34,7 @@ const Footer = () => {
             <h5 className="ts-footer-title">Quick Links</h5>
             <ul className="ts-footer-links-list">
               <li><Link to="/" onClick={handleScrollTop}><FaChevronRight /> Home</Link></li>
+              <li><Link to="/return-policy" onClick={handleScrollTop}><FaChevronRight /> Return Policy</Link></li>
               <li><Link to="/all-products" onClick={handleScrollTop}><FaChevronRight />All Products</Link></li>
               <li><Link to="/about" onClick={handleScrollTop}><FaChevronRight /> Our Story</Link></li>
               <li><Link to="/cart" onClick={handleScrollTop}><FaChevronRight /> My Cart</Link></li>

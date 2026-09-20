@@ -17,6 +17,7 @@ import AllProducts from './pages/AllProducts';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import { LogoProvider } from './context/LogoContext';
+import ReturnPolicy from './pages/ReturnPolicy';
 
 // Import theme CSS
 import './assets/css/bootstrap.min.css';
@@ -42,6 +43,7 @@ function App() {
                       <Route path="/cart" element={<Cart />} />
                       <Route path="/checkout" element={<Checkout />} />
                       <Route path="/about" element={<About />} />
+                      <Route path="/return-policy" element={<ReturnPolicy />} />
                       <Route path="/admin" element={<Admin />} />
                       <Route path="/all-products" element={<AllProducts />} />
                       <Route path="/product/:barcode" element={<ThemeProductDetail />} />
